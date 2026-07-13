@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f4ee;
+  --foreground: #102a31;
+  --muted: #61747a;
+  --brand: #164e63;
+  --brand-dark: #103b4a;
+  --accent: #d8a25e;
+  --success: #2f855a;
+  --surface: #fffaf2;
+  --line: #d8d2c6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+a:focus-visible {
+  outline: 3px solid rgba(216, 162, 94, 0.75);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  min-height: 100vh;
+}
+
+.field {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.field label {
+  color: #253c43;
+  font-size: 0.88rem;
+  font-weight: 700;
+}
+
+.input {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--foreground);
+  padding: 0.7rem 0.85rem;
+}
+
+.input[data-invalid="true"] {
+  border-color: #b42318;
+}
+
+.error {
+  color: #b42318;
+  font-size: 0.8rem;
+}
+
+.primary-button {
+  display: inline-flex;
+  min-height: 48px;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--brand);
+  color: #fff;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.8rem 1rem;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.primary-button:hover {
+  background: var(--brand-dark);
+}
+
+.primary-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.secondary-button {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border: 1px solid var(--brand);
+  border-radius: 8px;
+  background: transparent;
+  color: var(--brand);
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.65rem 0.9rem;
+}
+
+.panel {
+  border: 1px solid rgba(16, 42, 49, 0.1);
+  border-radius: 8px;
+  background: rgba(255, 250, 242, 0.94);
+  box-shadow: 0 18px 60px rgba(16, 42, 49, 0.12);
+}
+
+.fine-print {
+  color: var(--muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
