@@ -1,0 +1,19 @@
+{
+  "name": "Mortgage Lead Center",
+  "short_name": "Mortgage",
+  "description": "Get mortgage payment estimates and request personalized rate options.",
+  "start_url": ".",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#f7f4ee",
+  "theme_color": "#164e63",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
