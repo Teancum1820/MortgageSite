@@ -1,5 +1,5 @@
 import { spawnSync } from "node:child_process";
-import { copyFileSync, existsSync } from "node:fs";
+import { copyFileSync, existsSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const nextCli = join(process.cwd(), "node_modules", "next", "dist", "bin", "next");
@@ -26,3 +26,5 @@ const notFoundPath = join(outDir, "404.html");
 if (existsSync(indexPath)) {
   copyFileSync(indexPath, notFoundPath);
 }
+
+writeFileSync(join(outDir, ".nojekyll"), "");
